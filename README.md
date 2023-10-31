@@ -1,2 +1,2 @@
 # Python-Practices
-The practices which I did during my Python exercises, they all solve a simple daily life problem.
+ A collection of concise and straightforward Python code snippets solving everyday problems. Perfect for beginners and those looking for simple, practical coding solutions.
