@@ -18,3 +18,63 @@ A simple Python program to determine if a bishop or knight in a game of chess ca
 This Python script allows you to assess whether a bishop and a knight in a game of chess can attack each other based on their positions on the board. It engages the user by prompting input for the horizontal and vertical positions of both the knight and the bishop. Subsequently, it calculates whether the two pieces can attack each other or not.
 
 
+## Bingo_Score_Check
+Tombala Game Simulation
+
+This is a Python program that simulates a simplified version of the Tombala game for two players. The game is typically known as a bingo-like game, and this implementation provides an overview of the basic rules and gameplay.
+
+### Introduction
+
+In this Tombala game simulation, two players, Grandma and you, each receive a card at the beginning of the game. Each card contains 12 unique numbers, ranging from 1 to 30. It's important to note that, in the traditional game, cards usually contain 15 numbers ranging from 1 to 90. However, for simplicity, we have chosen to use a smaller range of numbers in this version of the game.
+
+The game is played using a sack containing 30 stones, each with a unique number ranging from 1 to 30. The objective of the game is for the players to mark off all the numbers on their cards as the stones are drawn from the sack.
+
+### Game Rules
+
+The Tombala game is played in rounds, and in each round, one stone is randomly drawn from the sack. If the number on the drawn stone matches any of the numbers on a player's card, that number is marked as achieved. The winner of the game is the player who successfully achieves all the numbers on their card first.
+
+There are three possible outcomes for this two-player version of the game:
+
+You Win: If you manage to achieve all the numbers on your card before Grandma does.
+Grandma Wins: If Grandma achieves all the numbers on her card before you do.
+Tie: A tie can occur if both you and Grandma have only one number remaining on your cards, and that number is drawn from the sack.
+
+## Rock, Paper, Scissors Game
+
+This Python program lets you play the classic "Rock, Paper, Scissors" game against the computer. The game continues until one of the players (you or the computer) wins three times in total. Your program will keep track of the scores for both the user and the computer.
+
+### How to Play
+
+1. Enter your weapon choice (rock, paper, or scissors) as input. Make sure to use all lowercase letters.
+
+2. The computer will randomly select its weapon choice.
+
+3. If you enter an incorrect input, the program will prompt you to provide a valid weapon choice until you do so.
+
+4. The game ends when one side reaches a total of 3 wins.
+
+Enjoy the game and may the best player win!
+
+
+## Election_Simulation
+A Python program simulating a local election system with 3 political parties, user input validation, and data management for city-based election results. Includes menu options for entering, changing, and displaying election results in a user-friendly manner.
+
+### Features
+
+- User-friendly input validation for political party names and city names.
+- Ensure the uniqueness of political party names (case-insensitive).
+- Menu options for:
+  - Entering results for a new city.
+  - Changing election results for a specific city.
+  - Displaying the current election results, including leading parties.
+  - Exiting the program.
+- Data management for storing election results in a compact format.
+- Provides clear and informative error messages for user guidance.
+
+### Usage
+
+1. Run the program.
+2. Enter the names of three political parties.
+3. Choose from the menu options to manage and analyze election results.
+
+
