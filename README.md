@@ -77,4 +77,18 @@ A Python program simulating a local election system with 3 political parties, us
 2. Enter the names of three political parties.
 3. Choose from the menu options to manage and analyze election results.
 
+## Dictionary_IO
 
+This Python program is designed to help you make informed choices when buying a product. It uses file operations and dictionaries to manage information about products and their ratings from different companies. The program keeps prompting the user for input until the special command 'exit' is entered.
+
+### Problem Description
+
+The objective is to create a Python program that advises users on which product to buy based on ratings from different companies. The program uses two input files, "products.txt" and "ratings.txt," to create dictionaries containing information about products and their ratings from various companies.
+
+### Program Workflow
+
+Read the input files, "products.txt" and "ratings.txt." </br>
+Create dictionaries for products and ratings, mapping each product to the company selling it and its rating. </br>
+Take a string input from the user, referring to the item they want to buy. </br>
+Find the company that sells the requested product with the highest rating. </br>
+Print the name of the selected company. </br>
