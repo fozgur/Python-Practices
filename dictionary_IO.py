@@ -1,62 +1,65 @@
-def find_top_seller(user_product):
-    count = 0
-    sellers = []
+def userInput(userprod):
+  i=0
+  sellers = []
+  for k, item in product.items():
+    if userprod in item:
+      i+=1
+      sellers.append(k)
+  if i == 0:
+    print ("None of the companies sell this product.")
+  if i==1:
+    print (f"Only {k} sells this product.")
+  if i > 1:
+    sellers_rating = []
+    for seller in sellers:
+      sellers_rating.append(rating[seller])
+    top_seller_rating = max(sellers_rating)
+    top_seller = []
+    top_point = []
+    for k,v in rating.items():
+      if v == top_seller_rating:
+        top_seller.append(k)
+        top_point.append(v)
+        return top_seller, top_point
 
-    for company, items in products.items():
-        if user_product in items:
-            count += 1
-            sellers.append(company)
-
-    if count == 0:
-        print("None of the companies sell this product.")
-    elif count == 1:
-        print(f"Only {sellers[0]} sells this product.")
-    elif count > 1:
-        sellers_rating = [rating[seller] for seller in sellers]
-        top_seller_rating = max(sellers_rating)
-
-        top_sellers = [seller for seller, rate in rating.items() if rate == top_seller_rating]
-        top_points = [top_seller_rating] * len(top_sellers)
-
-        return top_sellers, top_points
 
 
 products_path = "products.txt"
 ratings_path = "ratings.txt"
 
-with open(products_path) as products_file:
-    product_lines = products_file.readlines()
+products = open(products_path)
+product_line = products.readlines()
+products.close()
+ratings = open(ratings_path)
+rating_line = ratings.readlines()
+ratings.close()
 
-with open(ratings_path) as ratings_file:
-    rating_lines = ratings_file.readlines()
+product={}
+rating={}
 
-products = {}
-rating = {}
+for line in product_line:
+  temp = line.split("-")
+  comp = temp[0]
+  prod = temp[1].strip("\n").split(",")
+  product[comp]=prod
 
-for line in product_lines:
-    temp = line.split("-")
-    company = temp[0]
-    products_list = temp[1].strip("\n").split(",")
-    products[company] = products_list
-
-for line in rating_lines:
-    temp1 = line.split(",")
-    company1 = temp1[0]
-    rating1 = float(temp1[1].strip("\n").split("/")[0])
-    rating[company1] = rating1
+for line in rating_line:
+  temp1 = line.split(",")
+  comp1 = temp1[0]
+  rating1 = temp1[1].strip("\n").split("/")[0]
+  rating[comp1] = rating1
 
 
-# Main
+#main
 while True:
-    user_product = input("Please enter the product you want to buy:")
-    if user_product.lower() == "exit":
-        print("Goodbye!")
-        break
-    else:
-        try:
-            recommended_sellers, top_points = find_top_seller(user_product)
-            if recommended_sellers:
-                print(f"We suggest you buy {user_product} from {recommended_sellers[0]} because it has the highest ranking as {top_points[0]}")
-        except Exception as e:
-            print(f"An error occurred: {e}")
-            continue
+  userprod = input("Please enter the product you want to buy:")
+  if userprod == "exit":
+    print ("Goodbye!")
+    break
+  else:
+    try:
+      recommend, top_point= userInput(userprod)
+      if len(recommend) == 1:
+        print (f"We suggest you buy {userprod} from {recommend[0]} because it has the highest ranking as {top_point[0]}")
+    except:
+      continue
