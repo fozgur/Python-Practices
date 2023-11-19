@@ -1,4 +1,4 @@
-# Python_Practices
+# Python Practices
  A collection of concise and straightforward Python code snippets created by me solving everyday problems. Perfect for beginners and those looking for simple, practical coding solutions.
 
 ## Python Security Checker
@@ -92,3 +92,28 @@ Create dictionaries for products and ratings, mapping each product to the compan
 Take a string input from the user, referring to the item they want to buy. </br>
 Find the company that sells the requested product with the highest rating. </br>
 Print the name of the selected company. </br>
+
+
+## Facebook Friend Recommender
+
+This project simulates a simple friend suggestion algorithm for Facebook, based on a given dataset of friend pairs. The dataset, named friendship.txt, contains anonymized user IDs representing friendships. The goal is to suggest friends for a specific user using a basic algorithm.
+
+### Dataset Format
+
+The dataset is in a tab-separated format, with each line containing two integer values representing the user IDs of a friend pair:
+*user1\tuser2
+Facebook's undirected relationship format ensures that if user1 is friends with user2, then user2 is also friends with user1.
+
+## Usage
+
+To run the program, provide an integer input corresponding to the ID of the user for whom friend suggestions will be made. The program will then suggest the most frequent user(s) among the friends of the friends of the input user (2nd degree connections). If the input user ID does not exist in the dataset, the program will display "There is no such user."
+
+##Algorithm
+
+Verify if the input user ID exists in the dataset. </br>
+If the user exists: </br>
+Identify 1st degree connections (friends) of the input user. </br>
+Find friends of these 1st degree connections. </br>
+Determine the most frequent user ID among these 2nd degree connections. </br>
+Display the suggested friend(s). </br>
+If the user does not exist, display "There is no such user." </br>
