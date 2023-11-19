@@ -100,15 +100,15 @@ This project simulates a simple friend suggestion algorithm for Facebook, based 
 
 ### Dataset Format
 
-The dataset is in a tab-separated format, with each line containing two integer values representing the user IDs of a friend pair:
-*user1\tuser2
+The dataset is in a tab-separated format, with each line containing two integer values representing the user IDs of a friend pair: </br>
+*user1\tuser2 </br>
 Facebook's undirected relationship format ensures that if user1 is friends with user2, then user2 is also friends with user1.
 
 ## Usage
 
 To run the program, provide an integer input corresponding to the ID of the user for whom friend suggestions will be made. The program will then suggest the most frequent user(s) among the friends of the friends of the input user (2nd degree connections). If the input user ID does not exist in the dataset, the program will display "There is no such user."
 
-##Algorithm
+## Algorithm
 
 Verify if the input user ID exists in the dataset. </br>
 If the user exists: </br>
